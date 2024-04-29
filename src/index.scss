@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Commissioner:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300..700&family=Ubuntu:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --darkblue: hsl(240, 38%, 20%);
+  --grayishblue: hsl(240, 18%, 77%);
+}
+
+/* styles.css */
+.main-section {
+  background-image: url("./assets/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: auto;
+  .section {
+    background-image: url("./assets/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 80% 45%;
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 50px;
+      .slider {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+
+        .slide {
+          display: none;
+        }
+
+        .slide-style {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          position: relative;
+          background-image: url("./assets/pattern-quotes.svg");
+          background-repeat: no-repeat;
+          background-position: 60px 120px;
+          .left-section {
+            .left-section-text {
+              font-size: 25px;
+              color: var(--darkblue);
+              line-height: 35px;
+              margin-bottom: 30px;
+            }
+            .left-section-info {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              margin-top: 20px;
+              .left-section-info-name {
+                font-size: 19px;
+              }
+              .left-section-info-role {
+                font-size: 16px;
+                color: var(--grayishblue);
+              }
+            }
+          }
+        }
+
+        .right-section {
+          position: relative;
+          padding: 20px 0;
+          img {
+            border-radius: 5px;
+          }
+          .arrows {
+            position: absolute;
+            bottom: 1%;
+            left: 10%;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 10px 2px 10px;
+            img {
+              height: 15px;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .slide.active {
+          display: block;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-section {
+    background-image: url("./assets/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: auto;
+    .section {
+      background-image: url("./assets/pattern-bg.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 10%;
+
+      .container {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 50px;
+        .slider {
+          overflow: hidden;
+          width: 100%;
+          position: relative;
+
+          .slide {
+            display: none;
+          }
+
+          .slide-style {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 20px;
+            position: relative;
+            background-image: url("./assets/pattern-quotes.svg");
+            background-repeat: no-repeat;
+            background-size: 70px;
+            background-position: 50% 70%;
+            .left-section {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              .left-section-text {
+                font-size: 20px;
+                color: var(--darkblue);
+                line-height: 35px;
+              }
+              .left-section-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-top: 0px;
+                .left-section-info-name {
+                  font-size: 19px;
+                }
+                .left-section-info-role {
+                  font-size: 16px;
+                  color: var(--grayishblue);
+                }
+              }
+            }
+          }
+
+          .right-section {
+            position: relative;
+            padding: 20px 0;
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              border-radius: 5px;
+              width: 85%;
+            }
+            .arrows {
+              position: absolute;
+              bottom: 1%;
+              left: 43%;
+              background-color: #fff;
+              display: flex;
+              align-items: center;
+              gap: 30px;
+              padding: 10px 15px;
+              border-radius: 20px;
+              box-shadow: rgba(0, 0, 0, 0.25) 10px 2px 10px;
+              img {
+                height: 15px;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .slide.active {
+            display: block;
+            transition: all 0.5s ease;
+          }
+        }
+      }
+    }
+  }
+}
